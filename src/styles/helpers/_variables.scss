@@ -1,0 +1,15 @@
+// *****************
+// COLORS
+// *****************
+$white: #fff;
+$blue: #53acd8; // rgb 83 172 216
+
+// *****************
+// FONTS
+// *****************
+@font-face {
+    font-family: "HelveticaNeue";
+    src: url("/fonts/HelveticaNeueLTStdCn.woff") format("woff");
+}
+
+$font-HelveticaNeue : "HelveticaNeue", "Helvetica", "Roboto", "Arial", sans-serif;

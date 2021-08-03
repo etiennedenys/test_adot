@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title><%= htmlWebpackPlugin.options.title %></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- meta -->
+        <meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
+        <script>
+            // Initialize and add the map
+            function initMap() {
+                // location
+                const address = { lat: 48.89611410000021, lng: 2.2501791687648725 };
+                // The map
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 16,
+                    center: address,
+                    disableDefaultUI: true,
+                });
+                // The marker
+                const marker = new google.maps.Marker({
+                    position: address,
+                    map: map,
+                });
+            }
+        </script>
+        <!-- og:meta -->
+        <meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>">
+        <meta property="og:site_name" content="<%= htmlWebpackPlugin.options.company %>">
+        <meta property="og:description" content="<%= htmlWebpackPlugin.options.description %>">
+        <meta property="og:locale" content="<%= htmlWebpackPlugin.options.lang %>">
+        <meta property="og:type" content="website">
+    </head>
+    <body>
+        <div id="frame">
+            <main>
+                <img inline src="src/images/logo.svg"/>
+                <div id="step1">
+                    <span>prêts</span>
+                    <span>pour la rentrée</span>
+                    <span>des séries ?</span>
+                </div>
+                <div id="step2">
+                    <div id="step2__text1">
+                        <span>avec</span>
+                        <span>le pack konnecté</span>
+                    </div>
+                    <div id="step2__text2">
+                        <span>à partir de</span>
+                        <span>99€</span>
+                    </div>
+                </div>
+                <div id="step3">
+                    <span>2 paires à la vue :</span>
+                    <span>1 optique</span>
+                    <span>anti-lumière bleue</span>
+                    <span>+ 1 solaire<sup>**</sup></span>
+                </div>
+                <div id="step4">
+                    <span>Opticien Krys</span>
+                    <span>24 rue de Bezons</span>
+                    <span>92400 Courbevoie</span>
+                    <button>
+                        <img inline src="src/images/mapIcon.svg"/>
+                        me rendre en magasin
+                    </button>
+                </div>
+                <div id="textSub">
+                    * Prix de vente TTC conseillé en magasin. ** Du 24/08/2017 au 31/10/2017<br/>
+                    Voir conditions complètes sur <a href="krys.com/offre-rentree-2017" title="Offre rentrée 2017">krys.com/offre-rentree-2017</a><br/>  
+                    Dispositif médical. Consultez un professionnel de santé.
+                </div>
+            </main>
+            <div id="video-wrapper">
+                <video id="video" autoplay poster="" loop muted></video>
+            </div>
+            <div id="map"></div>
+        </div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjp3_azz_IUy5BAC_ucCmZgts30YxMHqI&callback=initMap&libraries=&v=weekly" async></script>
+   </body>
+</html>

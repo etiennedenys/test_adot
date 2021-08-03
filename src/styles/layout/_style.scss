@@ -1,0 +1,278 @@
+html {
+    font-size: 62.5%;
+    background: $white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+#frame {
+    overflow: hidden;
+  background: $blue;
+  max-width: 1290px;
+  margin: 0 auto;
+  font-family: $font-HelveticaNeue;
+  font-weight: 400; // medium
+  color: white;
+  // width: 375px;
+  // height: 667px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  align-items: center;
+}
+
+main {
+    height: 52vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#step1 {
+    @extend %flexCenter;
+    flex-direction: column;
+    font-size: 15rem;
+    line-height: 15rem;
+    text-transform: uppercase;
+    position: absolute;
+    left: 0;
+    top: 105rem;
+    width: 100%;
+    animation: fadeOut .8s forwards;
+    animation-delay: 2.5s;
+    span {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        margin-right: -200%;
+        animation: text-line .6s forwards;
+        animation-timing-function: ease-out;
+        &:nth-child(1) {
+            animation-delay: .5s;
+        }
+        &:nth-child(2) {
+            animation-delay: .75s;
+        }
+        &:nth-child(3) {
+            animation-delay: 1s;
+        }
+    }
+    
+}
+
+#logo {
+    width: 47rem;
+    @extend %centerAbsolute;
+    top: 28rem;
+    animation: logo-movement .5s forwards;
+    animation-delay: 2.5s;
+}
+
+#textSub {
+    font-size: 5rem;
+    position: absolute;
+    top: 150rem;
+    width: 100%;
+    text-align: left;
+    padding: 0 7rem;
+    box-sizing: border-box;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn, fadeOut;
+    animation-duration: .4s, .4s;
+    animation-delay: 3s, 7.5s;
+    animation-timing-function: ease-in, ease-out;
+    animation-iteration-count: 1, 1;
+    opacity: 0;
+    a {
+        color: white;
+        text-decoration: underline;
+    }
+}
+
+#step2 {
+    animation: fadeOut .8s forwards;
+    animation-delay: 5s;
+}
+
+#step2__text1 {
+    @extend %flexCenter;
+    flex-direction: column;
+    font-size: 15rem;
+    line-height: 15rem;
+    text-transform: uppercase;
+    position: absolute;
+    left: 0;
+    top: 35rem;
+    width: 100%;
+    span {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        margin-right: -200%;
+        animation: text-line .6s forwards;
+        animation-timing-function: ease-out;
+        &:nth-child(1) {
+            animation-delay: 3s;
+        }
+        &:nth-child(2) {
+            animation-delay: 3.25s;
+        }
+    }
+}
+
+#step2__text2 {
+    @extend %flexCenter;
+    flex-direction: column;
+    font-size: 15rem;
+    line-height: 15rem;
+    text-transform: uppercase;
+    position: absolute;
+    left: 0;
+    top: 83rem;
+    width: 100%;
+    span {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        margin-right: -200%;
+        animation: text-line .6s forwards;
+        animation-timing-function: ease-out;
+        &:nth-child(1) {
+            font-size: 12rem;
+            line-height: 12rem;
+            animation-delay: 3.5s;
+        }
+        &:nth-child(2) {
+            &:after {
+                content: '*';
+            }
+            font-size: 40rem;
+            line-height: 32rem;
+            animation-delay: 3.75s;
+            font-weight: bold;
+        }
+    }
+}
+
+#step3 {
+    @extend %flexCenter;
+    flex-direction: column;
+    font-size: 15rem;
+    line-height: 15rem;
+    text-transform: uppercase;
+    position: absolute;
+    left: 0;
+    top: 50rem;
+    width: 100%;
+    animation: fadeOut .6s forwards;
+    animation-delay: 7.5s;
+    span {
+        font-weight: bold;
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        margin-right: -200%;
+        animation: text-line .6s forwards;
+        animation-timing-function: ease-out;
+        &:nth-child(1) {
+            font-size: 16rem;
+            line-height: 16rem;
+            animation-delay: 5.25s;
+        }
+        &:nth-child(2) {
+            font-size: 30rem;
+            line-height: 33rem;
+            animation-delay: 5.5s;
+            font-weight: bold;
+        }
+        &:nth-child(3) {
+            font-size: 15rem;
+            line-height: 15rem;
+            animation-delay: 5.75s;
+        }
+        &:nth-child(4) {
+            font-size: 24rem;
+            line-height: 24rem;
+            animation-delay: 6s;
+            sup {
+                position: relative;
+                top: 0rem;
+                font-size: 13rem;
+            }
+        }
+    }
+}
+
+#step4 {
+    @extend %flexCenter;
+    flex-direction: column;
+    text-transform: uppercase;
+    position: absolute;
+    left: 0;
+    top: 65rem;
+    width: 100%;
+    span {
+        font-size: 10rem;
+        line-height: 13rem;
+        font-weight: bold;
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        animation: fadeIn .6s forwards;
+        opacity: 0;
+        &:nth-child(1) {
+            animation-delay: 7.5s;
+        }
+        &:nth-child(2) {
+            animation-delay: 7.75s;
+        }
+        &:nth-child(3) {
+            animation-delay: 8s;
+        }
+    }
+    button  {
+        font-size: 8rem;
+        background: transparent;
+        border: 1px solid $white;
+        position: absolute;
+        top: 75rem;
+        font-family: $font-HelveticaNeue;
+        color: $white;
+        text-transform: uppercase;
+        padding: 4rem 10rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1000;
+        transition: color .3s, background .3s;
+        animation: fadeIn .6s forwards;
+        opacity: 0;
+        animation-delay: 8.25s;
+        svg {
+            width: 8rem;
+            margin-right: 6rem;
+            path {
+                transition: fill .5s;
+            }
+        }
+        &:hover {
+            background: $white;
+            color: $blue;
+            svg path {
+                fill: $blue;
+            }
+        }
+    }
+}

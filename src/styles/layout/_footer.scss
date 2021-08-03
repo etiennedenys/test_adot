@@ -1,0 +1,20 @@
+#video-wrapper {
+    height: 48%;
+    display: flex;
+    #video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+   
+}
+
+#map {
+    height: 48%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -48%;
+    animation: slideUp .6s forwards;
+    animation-delay: 8.5s;
+}
